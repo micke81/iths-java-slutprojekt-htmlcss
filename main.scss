@@ -1,7 +1,5 @@
 $font-stack:    Helvetica, sans-serif;
   $primary-color: #555;
-  
-
   body {
     font: 100% $font-stack;
     color: $primary-color;
@@ -9,23 +7,19 @@ $font-stack:    Helvetica, sans-serif;
     margin: 0 auto;
     padding: 0;
   }
-  
   .grid-container {
     max-width: 1000px;
     margin: auto;
     background: white;
     display: grid;
     gap: 1rem;
-    // grid-template-columns: repeat(4, 1fr);
-    // grid-template-rows: 60px minmax(200px, auto) 60 minmax(200px, auto) 100px;
-    // grid-template-areas:
-    // "h1 h1 h1 h1"
-    // "product product product product"
-    // "p p p p"
-    // "card card card none"
-    // "footer footer footer footer";
   }
- 
+  menu div.dans img{
+    background:orange;
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-end;
+  }
   nav {
     display: flex;
     align-items: center;
@@ -42,9 +36,7 @@ $font-stack:    Helvetica, sans-serif;
   }
   nav button{
     display: none;
-    
   }
-  
   nav section a{
     justify-content: space-between;
     text-decoration: none;
@@ -60,10 +52,10 @@ header{
 }
   header{
     grid-area: header;
-    //background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 21.5rem no-repeat rgb(80, 155, 245);
-    height: 50vh;
+    background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 21.5rem no-repeat rgb(80, 155, 245);
+    height: 57vh;
     }
-    header section{
+  header section{
       margin: 0px 0px 0px 10vw;
       margin-right: auto;
       padding: 1rem;
@@ -76,10 +68,7 @@ header{
   header section p{
         padding: 1rem;
         }  
-    
   header section .button{
-    
-
     border-radius: 13vh;
     background-color: green;
     color:lightgray;
@@ -158,6 +147,9 @@ header{
   header{
   background: rgb(80, 155, 245);
   }
+  main.grid-container .product{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -200,8 +192,27 @@ header{
     border-width: 1px;
     padding: 0.5rem;
   }
-  main.grid-container{
-    grid-template-columns: repeat(2, 1fr);
+  main.grid-container .product{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  main.grid-container .product img{
+    width: 10rem;
+  }
+  main.grid-container h1{
+    grid-column: auto / span 1;
+  }
+  main.grid-container h2{
+    grid-column: auto / span 1;
+  }
+  main.grid-container p{
+    grid-column: auto / span 1;
+
+  }
+  main.grid-container .product{
+    grid-column: auto / span 1;
+  }
+  main.grid-container .card h3{
+    grid-column: auto / span 1;
   }
     header section{
       display:cover;

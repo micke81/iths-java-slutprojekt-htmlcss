@@ -12,6 +12,12 @@ body {
   display: grid;
   gap: 1rem; }
 
+menu div.dans img {
+  background: orange;
+  display: flex;
+  justify-items: flex-start;
+  align-items: flex-end; }
+
 nav {
   display: flex;
   align-items: center;
@@ -44,7 +50,8 @@ header {
 
 header {
   grid-area: header;
-  height: 50vh; }
+  background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom/21.5rem no-repeat #509bf5;
+  height: 57vh; }
 
 header section {
   margin: 0px 0px 0px 10vw;
@@ -126,7 +133,9 @@ footer.bottom_menu {
 
 @media screen and (max-width: 780px) {
   header {
-    background: #509bf5; } }
+    background: #509bf5; }
+  main.grid-container .product {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 375px) {
   body {
@@ -156,7 +165,19 @@ footer.bottom_menu {
     height: 1rem;
     border-width: 1px;
     padding: 0.5rem; }
-  main.grid-container {
-    grid-template-columns: repeat(2, 1fr); }
+  main.grid-container .product {
+    grid-template-columns: repeat(1, 1fr); }
+  main.grid-container .product img {
+    width: 10rem; }
+  main.grid-container h1 {
+    grid-column: auto / span 1; }
+  main.grid-container h2 {
+    grid-column: auto / span 1; }
+  main.grid-container p {
+    grid-column: auto / span 1; }
+  main.grid-container .product {
+    grid-column: auto / span 1; }
+  main.grid-container .card h3 {
+    grid-column: auto / span 1; }
   header section {
     display: cover; } }
