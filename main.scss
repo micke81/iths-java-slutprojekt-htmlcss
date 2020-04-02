@@ -1,0 +1,192 @@
+$font-stack:    Helvetica, sans-serif;
+  $primary-color: #555;
+
+  body {
+    font: 100% $font-stack;
+    color: $primary-color;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .grid-container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60px minmax(200px, auto) 60 minmax(200px, auto) 100px;
+    grid-template-areas:
+    "h1 h1 h1 h1"
+    "product product product product"
+    "p p p p"
+    "card card card none"
+    "footer footer footer footer";
+  }
+ 
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: nav;
+    background: rgb(80, 155, 245);
+    padding: 1rem;
+    text-decoration: none;
+  }
+  nav img {
+            margin: 0px 0px 0px 10vw;
+            margin-right: auto;
+            width: 10rem;
+  }
+  nav button img{
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+  
+  nav section a{
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+    margin: 0.1rem;
+    padding: 0.4rem;
+  }
+header{
+  display: flex;
+  background: rgb(80, 130, 245);
+  justify-content: center;
+  align-items: center;
+}
+  header{
+    grid-area: header;
+    background-color: darkblue;
+    background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 21.5rem no-repeat rgb(80, 155, 245);
+    height: 55vh;
+    }
+    header section{
+     
+      padding: 1rem;
+    }
+  header section h1{
+      font-size: x-large;
+      padding: 1rem;
+       }
+
+  header section p{
+        padding: 1rem;
+        }  
+    
+  header section .button{
+    border-radius: 13vh;
+    background-color: green;
+    color:lightgray;
+    font-size: small;
+    width: 21.5vw;
+    height: 1rem;
+    border-width: 1px;
+    padding: 0.5rem;
+  }
+  main{ 
+    min-width: 1000px;
+  }
+  main.grid-container .product{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background: grey;
+    margin: 0 auto;
+  
+  }
+
+  main.grid-container .product img{
+    width: 10rem;
+  }
+  main.grid-container h1{
+    grid-column: auto / span 4;
+    text-align: center;
+    padding: 1rem;
+    
+  }
+  main.grid-container h2{
+    grid-column: auto / span 4;
+    text-align: center;
+    padding: 1rem;
+  }
+  main.grid-container p{
+    grid-column: auto / span 4;
+    text-align:center;
+    padding: 1rem;
+  }
+  main.grid-container .product{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-items: center;
+    grid-column: auto / span 1;
+    background: grey;
+    background-color: #fff;
+    height: 20rem;
+  }
+  
+  main.grid-container .card{
+    grid-column: auto / span 1;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background: whitesmoke;
+    height: 40rem;
+    border-width: thin;
+    border-radius: 0.1rem;
+    height: 30rem;
+  }
+  
+ footer.bottom_menu{
+    max-width: 1000;
+    grid-area: footer;
+    background: black;
+    width: 100%;
+}  
+
+//RESPONSIVT
+@media screen and (max-width: 900px) {
+  body {
+    background: #555;
+  }
+  nav {
+    background: black;
+
+  }
+  nav section a{
+    display: none;
+    background: #555;
+  }
+  header{
+    background: rgb(80, 155, 245);
+  }
+  nav button img{
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    margin:0;
+    margin-left: auto;
+    margin: auto;
+    color: rgb(80, 155, 245)
+  }
+  header section .button{
+    border-radius: 13vh;
+    background-color: green;
+    color:lightgray;
+    font-size: small;
+    height: 1rem;
+    border-width: 1px;
+    padding: 0.5rem;
+  }
+
+} 
+
+  
+
+
+  
+
