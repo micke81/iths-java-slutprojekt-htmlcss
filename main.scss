@@ -1,9 +1,11 @@
 $font-stack:    Helvetica, sans-serif;
   $primary-color: #555;
+  
 
   body {
     font: 100% $font-stack;
     color: $primary-color;
+    font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     padding: 0;
   }
@@ -14,14 +16,14 @@ $font-stack:    Helvetica, sans-serif;
     background: white;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 60px minmax(200px, auto) 60 minmax(200px, auto) 100px;
-    grid-template-areas:
-    "h1 h1 h1 h1"
-    "product product product product"
-    "p p p p"
-    "card card card none"
-    "footer footer footer footer";
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: 60px minmax(200px, auto) 60 minmax(200px, auto) 100px;
+    // grid-template-areas:
+    // "h1 h1 h1 h1"
+    // "product product product product"
+    // "p p p p"
+    // "card card card none"
+    // "footer footer footer footer";
   }
  
   nav {
@@ -36,12 +38,11 @@ $font-stack:    Helvetica, sans-serif;
   nav img {
             margin: 0px 0px 0px 10vw;
             margin-right: auto;
-            width: 10rem;
+            width: 5rem;
   }
-  nav button img{
+  nav button{
     display: none;
-    width: 0px;
-    height: 0px;
+    
   }
   
   nav section a{
@@ -59,12 +60,12 @@ header{
 }
   header{
     grid-area: header;
-    background-color: darkblue;
-    background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 21.5rem no-repeat rgb(80, 155, 245);
-    height: 55vh;
+    //background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 21.5rem no-repeat rgb(80, 155, 245);
+    height: 50vh;
     }
     header section{
-     
+      margin: 0px 0px 0px 10vw;
+      margin-right: auto;
       padding: 1rem;
     }
   header section h1{
@@ -77,20 +78,23 @@ header{
         }  
     
   header section .button{
+    
+
     border-radius: 13vh;
     background-color: green;
     color:lightgray;
     font-size: small;
-    width: 21.5vw;
     height: 1rem;
     border-width: 1px;
     padding: 0.5rem;
+    margin: 16px;
+    width: 40vw;
   }
   main{ 
-    min-width: 1000px;
+    max-width: 1000px;
   }
   main.grid-container .product{
-    max-width: 1000px;
+    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -129,8 +133,9 @@ header{
     height: 20rem;
   }
   
-  main.grid-container .card{
-    grid-column: auto / span 1;
+  main.grid-container .card h3{
+
+    grid-column: auto / span 3;
     display: flex;
     align-items: center;
     justify-items: center;
@@ -149,11 +154,18 @@ header{
 }  
 
 //RESPONSIVT
-@media screen and (max-width: 900px) {
+@media screen and (max-width:780px) {
+  header{
+  background: rgb(80, 155, 245);
+  }
+}
+
+@media screen and (max-width: 375px) {
   body {
     background: #555;
   }
   nav {
+    // width: 100%;
     background: black;
 
   }
@@ -161,17 +173,23 @@ header{
     display: none;
     background: #555;
   }
-  header{
-    background: rgb(80, 155, 245);
-  }
+
   nav button img{
     display: flex;
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     margin:0;
     margin-left: auto;
     margin: auto;
     color: rgb(80, 155, 245)
+  }
+  nav button{
+    display: flex;
+    // padding:.1rem;
+  }
+  header{
+    // width: 100%;
+    background: rgb(80, 155, 245);
   }
   header section .button{
     border-radius: 13vh;
@@ -182,8 +200,14 @@ header{
     border-width: 1px;
     padding: 0.5rem;
   }
-
+  main.grid-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+    header section{
+      display:cover;
+    }
 } 
+
 
   
 
