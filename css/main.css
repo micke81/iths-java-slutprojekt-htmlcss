@@ -131,11 +131,21 @@ footer.bottom_menu {
   background: black;
   width: 100%; }
 
-@media screen and (max-width: 780px) {
+@media screen and (min-width: 375px) and (max-width: 780px) {
   header {
     background: #509bf5; }
   main.grid-container .product {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  main.grid-container h1 {
+    grid-column: auto / span 2; }
+  main.grid-container h2 {
+    grid-column: auto / span 2; }
+  main.grid-container p {
+    grid-column: auto / span 2; }
+  main.grid-container .product {
+    grid-column: auto / span 2; }
+  main.grid-container .card h3 {
+    grid-column: auto / span 2; } }
 
 @media screen and (max-width: 375px) {
   body {
@@ -158,13 +168,7 @@ footer.bottom_menu {
   header {
     background: #509bf5; }
   header section .button {
-    border-radius: 13vh;
-    background-color: green;
-    color: lightgray;
-    font-size: small;
-    height: 1rem;
-    border-width: 1px;
-    padding: 0.5rem; }
+    border-radius: 13vh; }
   main.grid-container .product {
     grid-template-columns: repeat(1, 1fr); }
   main.grid-container .product img {
