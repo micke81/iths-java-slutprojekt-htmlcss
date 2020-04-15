@@ -5,25 +5,15 @@ body {
   margin: 0 auto;
   padding: 0; }
 
-.grid-container {
-  max-width: 1000px;
-  margin: auto;
-  background: white;
-  display: grid;
-  gap: 1rem; }
-
-menu div.dans img {
-  background: orange;
-  display: flex;
-  justify-items: flex-start;
-  align-items: flex-end; }
+div {
+  background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom/50vh no-repeat #509bf5;
+  height: 57vh; }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   grid-area: nav;
-  background: #509bf5;
   padding: 1rem;
   text-decoration: none; }
 
@@ -38,32 +28,22 @@ nav button {
 nav section a {
   justify-content: space-between;
   text-decoration: none;
+  font-weight: bold;
   color: white;
-  margin: 0.1rem;
+  margin: 3rem;
   padding: 0.4rem; }
 
 header {
   display: flex;
-  background: #5082f5;
   justify-content: center;
   align-items: center; }
-
-header {
-  grid-area: header;
-  background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom/21.5rem no-repeat #509bf5;
-  height: 57vh; }
 
 header section {
   margin: 0px 0px 0px 10vw;
   margin-right: auto;
-  padding: 1rem; }
-
-header section h1 {
-  font-size: x-large;
-  padding: 1rem; }
-
-header section p {
-  padding: 1rem; }
+  padding: 1rem;
+  color: white;
+  font-size: x-large; }
 
 header section .button {
   border-radius: 13vh;
@@ -73,36 +53,33 @@ header section .button {
   height: 1rem;
   border-width: 1px;
   padding: 0.5rem;
-  margin: 16px;
   width: 40vw; }
 
-main {
-  max-width: 1000px; }
-
-main.grid-container .product {
+.grid-container {
+  max-width: 1000px;
+  background: white;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  background: grey;
-  margin: 0 auto; }
+  gap: 1rem; }
 
 main.grid-container .product img {
-  width: 10rem; }
+  grid-column: auto / span 4;
+  text-align: center;
+  padding: .5rem;
+  width: 10rem;
+  margin: 0px 0px 0px 10vw; }
 
 main.grid-container h1 {
   grid-column: auto / span 4;
   text-align: center;
-  padding: 1rem; }
+  padding: 0.5rem; }
 
 main.grid-container h2 {
   grid-column: auto / span 4;
-  text-align: center;
-  padding: 1rem; }
+  text-align: center; }
 
 main.grid-container p {
   grid-column: auto / span 4;
-  text-align: center;
-  padding: 1rem; }
+  text-align: center; }
 
 main.grid-container .product {
   display: flex;
@@ -110,29 +87,20 @@ main.grid-container .product {
   align-items: center;
   justify-items: center;
   grid-column: auto / span 1;
-  background: grey;
   background-color: #fff;
-  height: 20rem; }
-
-main.grid-container .card h3 {
-  grid-column: auto / span 3;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  background: whitesmoke;
-  height: 40rem;
-  border-width: thin;
-  border-radius: 0.1rem;
   height: 30rem; }
 
 footer.bottom_menu {
   max-width: 1000;
   grid-area: footer;
   background: black;
-  width: 100%; }
+  width: 100%;
+  padding: 2rem; }
 
 @media screen and (min-width: 375px) and (max-width: 780px) {
   header {
+    background: #509bf5; }
+  div {
     background: #509bf5; }
   main.grid-container .product {
     grid-template-columns: repeat(2, 1fr); }
@@ -150,6 +118,8 @@ footer.bottom_menu {
 @media screen and (max-width: 375px) {
   body {
     background: #555; }
+  div {
+    background: #509bf5; }
   nav {
     background: black; }
   nav section a {
@@ -166,7 +136,8 @@ footer.bottom_menu {
   nav button {
     display: flex; }
   header {
-    background: #509bf5; }
+    background: #509bf5;
+    margin: 0; }
   header section .button {
     border-radius: 13vh; }
   main.grid-container .product {

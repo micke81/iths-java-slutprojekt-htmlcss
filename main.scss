@@ -7,25 +7,16 @@ $font-stack:    Helvetica, sans-serif;
     margin: 0 auto;
     padding: 0;
   }
-  .grid-container {
-    max-width: 1000px;
-    margin: auto;
-    background: white;
-    display: grid;
-    gap: 1rem;
-  }
-  menu div.dans img{
-    background:orange;
-    display: flex;
-    justify-items: flex-start;
-    align-items: flex-end;
+
+  div{
+    background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 50vh no-repeat rgb(80, 155, 245);
+    height: 57vh;
   }
   nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     grid-area: nav;
-    background: rgb(80, 155, 245);
     padding: 1rem;
     text-decoration: none;
   }
@@ -40,34 +31,23 @@ $font-stack:    Helvetica, sans-serif;
   nav section a{
     justify-content: space-between;
     text-decoration: none;
+    font-weight: bold;
     color: white;
-    margin: 0.1rem;
+    margin: 3rem;
     padding: 0.4rem;
   }
 header{
   display: flex;
-  background: rgb(80, 130, 245);
   justify-content: center;
   align-items: center;
 } 
-  header{
-    grid-area: header;
-    background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 21.5rem no-repeat rgb(80, 155, 245);
-    height: 57vh;
-    }
   header section{
       margin: 0px 0px 0px 10vw;
       margin-right: auto;
       padding: 1rem;
-    }
-  header section h1{
+      color:white;
       font-size: x-large;
-      padding: 1rem;
-       }
-
-  header section p{
-        padding: 1rem;
-        }  
+  }
   header section .button{
     border-radius: 13vh;
     background-color: green;
@@ -76,40 +56,41 @@ header{
     height: 1rem;
     border-width: 1px;
     padding: 0.5rem;
-    margin: 16px;
     width: 40vw;
   }
-  main{ 
+  // main{ 
+  //   max-width: 1000px;
+  // }
+  .grid-container {
     max-width: 1000px;
-  }
-  main.grid-container .product{
-    
+    background: white;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    background: grey;
-    margin: 0 auto;
-  
   }
-
   main.grid-container .product img{
-    width: 10rem;
+    grid-column: auto / span 4;
+    text-align: center;
+    padding: .5rem;
+    width:10rem;
+    margin: 0px 0px 0px 10vw;
+
+    // width: auto;
+    // height: auto;
+    
   }
   main.grid-container h1{
     grid-column: auto / span 4;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     
   }
   main.grid-container h2{
     grid-column: auto / span 4;
     text-align: center;
-    padding: 1rem;
   }
   main.grid-container p{
     grid-column: auto / span 4;
     text-align:center;
-    padding: 1rem;
   }
   main.grid-container .product{
     display: flex;
@@ -117,35 +98,41 @@ header{
     align-items: center;
     justify-items: center;
     grid-column: auto / span 1;
-    background: grey;
-    background-color: #fff;
-    height: 20rem;
-  }
   
-  main.grid-container .card h3{
-
-    grid-column: auto / span 3;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    background: whitesmoke;
-    height: 40rem;
-    border-width: thin;
-    border-radius: 0.1rem;
+    background-color: #fff;
     height: 30rem;
   }
+  
+  // main.grid-container .card h3{
+
+  //   grid-column: auto / span 4;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-items: center;
+  //   background: orange;
+  //   gap: 1rem;
+  //   height: 40rem;
+  //   border-width: thin;
+  //   border-radius: 0.1rem;
+  //   height: 30rem;
+    
+  // }
   
  footer.bottom_menu{
     max-width: 1000;
     grid-area: footer;
     background: black;
     width: 100%;
+    padding: 2rem;
 }  
 
 //RESPONSIVT
 @media screen and (min-width:375px) and (max-width:780px) {
   header{
   background: rgb(80, 155, 245);
+  }
+  div{
+    background: rgb(80, 155, 245);
   }
   main.grid-container .product{
     grid-template-columns: repeat(2, 1fr);
@@ -156,6 +143,7 @@ header{
   main.grid-container h2{
     grid-column: auto / span 2;
   }
+  
   main.grid-container p{
     grid-column: auto / span 2;
 
@@ -171,8 +159,11 @@ header{
   body {
     background: #555;
   }
+  div{
+    background: rgb(80, 155, 245);
+  }
   nav {
-    // width: 100%;
+    
     background: black;
   }
   nav section a{
@@ -190,15 +181,14 @@ header{
   }
   nav button{
     display: flex;
-    // padding:.1rem;
   }
   header{
-    // width: 100%;
+    
     background: rgb(80, 155, 245);
+    margin: 0;
   }
   header section .button{
     border-radius: 13vh;
-    
   }
   main.grid-container .product{
     grid-template-columns: repeat(1, 1fr);
@@ -225,11 +215,11 @@ header{
     header section{
       display:cover;
     }
-} 
+  } 
 
-
-  
 
 
   
 
+
+  
