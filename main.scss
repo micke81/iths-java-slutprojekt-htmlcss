@@ -10,7 +10,7 @@ $font-stack:    Helvetica, sans-serif;
 
   div{
     background: url(https://campaigns-test.scdn.co/images/premium_dancer.png) right bottom / 50vh no-repeat rgb(80, 155, 245);
-    height: 57vh;
+    height: 60vh;
   }
   nav {
     display: flex;
@@ -28,6 +28,10 @@ $font-stack:    Helvetica, sans-serif;
   nav button{
     display: none;
   }
+  .button:hover{
+    background: orange;
+    opacity: 0.5;
+  }
   nav section a{
     justify-content: space-between;
     text-decoration: none;
@@ -36,6 +40,7 @@ $font-stack:    Helvetica, sans-serif;
     margin: 3rem;
     padding: 0.4rem;
   }
+
 header{
   display: flex;
   justify-content: center;
@@ -67,12 +72,16 @@ header{
     display: grid;
     gap: 1rem;
   }
+  main.grid-container {
+    margin-right: auto;
+    margin: 0px 0px 0px 10vw;
+  }
   main.grid-container .product img{
     grid-column: auto / span 4;
     text-align: center;
     padding: .5rem;
-    width:10rem;
-    margin: 0px 0px 0px 10vw;
+    width:11rem;
+
 
     // width: auto;
     // height: auto;
@@ -93,6 +102,8 @@ header{
     text-align:center;
   }
   main.grid-container .product{
+    // margin: 0px 0px 0px 10vw;
+    // margin-right: auto;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -119,6 +130,9 @@ header{
   // }
   
  footer.bottom_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 1000;
     grid-area: footer;
     background: black;
