@@ -81,10 +81,6 @@ header{
     text-align: center;
     padding: .5rem;
     width:11rem;
-
-
-    // width: auto;
-    // height: auto;
     
   }
   main.grid-container h1{
@@ -102,41 +98,24 @@ header{
     text-align:center;
   }
   main.grid-container .product{
-    // margin: 0px 0px 0px 10vw;
-    // margin-right: auto;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-items: center;
     grid-column: auto / span 1;
-  
     background-color: #fff;
     height: 30rem;
+    padding: .5rem;
+    width:11rem;
   }
-  
-  // main.grid-container .card h3{
-
-  //   grid-column: auto / span 4;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-items: center;
-  //   background: orange;
-  //   gap: 1rem;
-  //   height: 40rem;
-  //   border-width: thin;
-  //   border-radius: 0.1rem;
-  //   height: 30rem;
-    
-  // }
   
  footer.bottom_menu{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     max-width: 1000;
     grid-area: footer;
     background: black;
-    width: 100%;
     padding: 2rem;
 }  
 
